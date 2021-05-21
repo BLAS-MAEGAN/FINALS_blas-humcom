@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<head>
+    <title>FINAL PROJECT REQUIREMENT</title>
+</head>
+
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: rgb(53, 52, 52);
+}
+.navigationList{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.navigationItem{
+    margin-right: 50px;
+    padding: 10px 0;
+    position: relative;
+}
+
+.navigationItem:last-child{
+    margin-right: 0;
+}
+
+.navigationItem.active .navigationItem_Text {
+    color: rgb(78, 76, 76);
+
+}
+.navigationItem.active .navigationItem_Icon path {
+    fill: #fcfbfb;
+}
+.navigationItem_Button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 18px;
+}
+.navigationItem_Icon{
+    height: 24px;
+    width: 24px;
+}
+.navigationItem_Text{
+    display: none;
+    font-weight: bold;
+    font-size: 12px; 
+    color: #ccc;
+    letter-spacing: 0.7px;
+}
+
+@media screen and (min-width: 736px){
+    main{
+        padding: 20px;
+    }
+
+    .navigationList{
+        border-bottom: none;
+    }
+
+    .navigationItem_Text{
+        display: block;
+    }
+
+    .navigationItem_Icon{
+    margin-right: 6px;
+    }
+
+    .navigationItem.active::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 60px;
+    background-color: rgb(10, 10, 10);
+    top: -1px;
+    left: 0;
+    right: 0;}
+
+    .navigationItem.active .navigationItem_Icon path{
+        fill:black
+    }
+}
+
+</style>
+
+<body>
+    <main>
+    <ul class="navigationList">
+        <li class="navigationItem active">
+            <button class="navigationItem_Button">
+            <svg aria-label="Posts" class="navigationItem_Icon" fill="#262626"  viewBox="0 0 48 48" >
+                <path clip-rule="evenodd" d="M45 1.5H3c-.8 0-1.5.7-1.5 1.5v42c0 .8.7 1.5 1.5 1.5h42c.8 0 1.5-.7 
+                1.5-1.5V3c0-.8-.7-1.5-1.5-1.5zm-40.5 3h11v11h-11v-11zm0 14h11v11h-11v-11zm11 25h-11v-11h11v11zm14 
+                0h-11v-11h11v11zm0-14h-11v-11h11v11zm0-14h-11v-11h11v11zm14 28h-11v-11h11v11zm0-14h-11v-11h11v11zm0-
+                14h-11v-11h11v11z" fill-rule="evenodd"></path></svg>
+            <p class="navigationItem_Text">POSTS</p>
+            </button>
+        </li>
+        <li class="navigationItem">
+            <button class="navigationItem_Button">
+            <svg aria-label="Posts" class="navigationItem_Icon" fill="#262626"  viewBox="0 0 48 48" >
+                <path d="M41 10c-2.2-2.1-4.8-3.5-10.4-3.5h-3.3L30.5 3c.6-.6.5-1.6-.1-2.1-.6-.6-1.6-.5-2.1.1L24 5.6 19.7 
+                1c-.6-.6-1.5-.6-2.1-.1-.6.6-.7 1.5-.1 2.1l3.2 3.5h-3.3C11.8 6.5 9.2 7.9 7 10c-2.1 2.2-3.5 4.8-3.5 10.4v13.1c0 
+                5.7 1.4 8.3 3.5 10.5 2.2 2.1 4.8 3.5 10.4 3.5h13.1c5.7 0 8.3-1.4 10.5-3.5 2.1-2.2 3.5-4.8 3.5-10.4V20.5c0-5.7-1.4-8.3-3.5-10.5zm.5 
+                23.6c0 5.2-1.3 7-2.6 8.3-1.4 1.3-3.2 2.6-8.4 2.6H17.4c-5.2 0-7-1.3-8.3-2.6-1.3-1.4-2.6-3.2-2.6-8.4v-13c0-5.2 1.3-7 
+                2.6-8.3 1.4-1.3 3.2-2.6 8.4-2.6h13.1c5.2 0 7 1.3 8.3 2.6 1.3 1.4 2.6 3.2 2.6 8.4v13zM34.6 
+                25l-9.1 2.8v-3.7c0-.5-.2-.9-.6-1.2-.4-.3-.9-.4-1.3-.2l-11.1 3.4c-.8.2-1.2 1.1-1 1.9.2.8 1.1 1.2 1.9 1l9.1-2.8v3.7c0 
+                .5.2.9.6 1.2.3.2.6.3.9.3.1 0 .3 0 .4-.1l11.1-3.4c.8-.2 1.2-1.1 1-1.9s-1.1-1.2-1.9-1z"></path></svg>
+            <p class="navigationItem_Text">IGTV</p>
+            </button>
+        </li>
+        <li class="navigationItem">
+            <button class="navigationItem_Button">
+            <svg aria-label="Saved" class="navigationItem_Icon" fill="#262626"  viewBox="0 0 48 48" >
+            <path d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 3.7 0 
+            4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 0 1.6.3 2.2.9l15.8 
+            16V3H6v39.9l15.8-16c.6-.6 1.4-.9 2.2-.9z"></path></svg>
+            <p class="navigationItem_Text">SAVED</p>
+            </button>
+        </li>
+    </ul>
+    </main>
+</body>
