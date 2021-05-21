@@ -53,7 +53,7 @@ body{
     background: transparent;
     appearance: none;
     -webkit-appearance: none;
-    padding: 18px;
+    padding: 2px;
 }
 .navigationItem_Icon{
     height: 24px;
@@ -69,11 +69,17 @@ body{
 
 .PhotoGrid{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .PhotoGrid_Photo{
-    width: 33.3%;
-    min-height: 200px;
+    width: 33%;
+    width: calc(33.3% - 3px);
+    min-height: 30vw;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 5px;
 }
 
 @media screen and (min-width: 736px){
@@ -92,6 +98,10 @@ body{
     .navigationItem{
         width: auto;
         margin-right: 50px;
+    }
+
+    .navigationItem_Button{
+        padding: 18px 0;
     }
 
     .navigationItem_Icon{
@@ -114,11 +124,39 @@ body{
     .navigationItem.active .navigationItem_Icon path{
         fill:black
     }
+
+    .PhotoGrid{
+        justify-content: space-between;
+    }
+
+@media screen and (min-width: 1093px){
+    main{
+        justify-content:center ;
+        max-width: 2000px;
+    }
+
+    .PhotoGrid{
+        width: 1000px;
+        justify-content: center;
+        margin-left: 130px;
+    }
+
+    .PhotoGrid_Photo{
+        width: 35%;
+        width: calc(28% - 16px);
+        min-height: 20vw;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 25px;
+        margin-left: 25px;
+    }
+
 }
 
 </style>
 
 <body>
+
     <main>
     <ul class="navigationList">
         <li class="navigationItem active">
@@ -164,13 +202,31 @@ body{
         <a href= "#"
             class = "PhotoGrid_Photo" 
             title = "2" 
-            style = "background-image: url('../site/imgs/j1.jpg');"
+            style = "background-image: url('../site/imgs/m1.jpg');"
             ></a>
         
         <a href="#"
             class = "PhotoGrid_Photo" 
             title = "3" 
-            style = "background-image: url('../site/imgs/m1.jpg');"
+            style = "background-image: url('../site/imgs/j1.jpg');"
+            ></a>
+            
+        <a href="#"
+            class ="PhotoGrid_Photo"
+            title = "4" 
+            style = "background-image: url('../site/imgs/uy1.JPG');"
+            ></a>
+        
+        <a href= "#"
+            class = "PhotoGrid_Photo" 
+            title = "5" 
+            style = "background-image: url('../site/imgs/s1.jpg');"
+            ></a>
+        
+        <a href="#"
+            class = "PhotoGrid_Photo" 
+            title = "6" 
+            style = "background-image: url('../site/imgs/f3.jpg');"
             ></a>
     </section>
     </main>
